@@ -57,12 +57,20 @@ Team Horizon 2023
 3. Create an Azure Function App. Create a HTTP Trigger function and upload the index.js & function.json which is in our Source code
 4. Copy the Azure Function App URL and configure Webhook in your Sitecore/System/Webhooks
 5. Create a Cosmos DB with NO SQL
+![CosmosDB](https://user-images.githubusercontent.com/48400867/222911962-512cc446-6ad6-429b-a546-a47743049c6f.jpg)
 6. Create a Open AI free account
 
 Once you have done with all the above setup,
 
 1. Update any content in Sitecore Content Editor
+![2 Sitecore](https://user-images.githubusercontent.com/48400867/222912080-510910d5-f316-43ed-9ded-0b40bac735f5.jpg)
+![3 workorder creation](https://user-images.githubusercontent.com/48400867/222912135-73092e41-941f-4de7-8d85-53995221d7ac.jpg)
+![4 save](https://user-images.githubusercontent.com/48400867/222912236-2a4c8cfc-51dd-4c74-8303-301846592fb5.jpg)
+
 2. Webhooks will get triggered whenever the content updates under the Global Node. It also logs the data in Cosmos DB
+![5 itemadded in cosmos](https://user-images.githubusercontent.com/48400867/222912275-6df6c7e9-c2e3-4159-9463-5747bd7eab79.jpg)
+
+
 3. We have integrated with OpenAI API which translates the content as per the request
 
 ## Usage instructions
