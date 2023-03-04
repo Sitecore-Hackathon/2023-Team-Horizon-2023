@@ -15,6 +15,8 @@
  - __Rupert, our reporting guru__ loves visibility and wants to communicate with global campaign managers on transcreation orders. 
  - __Brenda, our marketing brand manager__ wants content available to omni-channels for all locales to meet global demands.
 
+![Transcreation Portal](images/portal.png)
+
 # Solution Design
 
 1.	We leverage the  __Sitecore XM webhooks__ functionality to trigger transcreation work orders raised by Globa, our global content producer. She does this by creating new versions, in Sitecore XM, of content for different languages to meet global needs.  
@@ -71,4 +73,3 @@ Once you have done with all the above setup,
 4.We have integrated with OpenAI API which translates the content as per the request
 
 5.Deployed version of our Portal avialable on [Netlify](https://sitecorehorizon2023.netlify.app/)
-
