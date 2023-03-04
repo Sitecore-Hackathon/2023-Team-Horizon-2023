@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "workorderDocument",
+      "databaseName": "Horizon",
+      "collectionName": "workorder",
+      "createIfNotExists": true,
+      "connectionStringSetting": "sitecoreteamhorizon2023_DOCUMENTDB",
+      "direction": "out",
+      "type": "cosmosDB"
+    },
+    {
+      "name": "outputQueueItem",
+      "direction": "out",
+      "type": "queue",
+      "connection": "AzureWebJobsStorage",
+      "queueName": "outqueue"
+    }
+  ]
+}
