@@ -30,3 +30,47 @@ Team Horizon 2023
 
 <img width="1507" alt="Sitecore Hackathon-2023 - Team Horizon 2023" src="https://user-images.githubusercontent.com/48400867/222894599-fcc2e6ac-6eb4-4e10-9102-a224a8e094b5.png">
 
+
+## Video link
+⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
+
+⟹ [Replace this Video link](#video-link)
+
+
+
+## Pre-requisites and Dependencies
+
+⟹ Does your module rely on other Sitecore modules or frameworks?
+
+- Sitecore XM 10.3 with Webhook configuration
+- We are using Azure Function App as Notification Hub
+- Azure Cosmos DB as a repository to track our transcreation work orders
+- JamStack web portal to pick the transcreation orders
+- Open AI integration to translate the content
+
+
+## Installation instructions
+⟹ Write a short clear step-wise instruction on how to install your module.  
+
+1. Globa created content in Sitecore content Editor in English (en-US), webhook triggered our notification Hub.Below is the screenshot where is processing the item
+3. Function App sent the email notification to Nicola the localization analyst
+4. It also logged the data in Cosmos DB
+5. We have integrated with OpenAI API which translates the content as per the request
+
+## Usage instructions
+⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
+
+Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+
+![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
+
+You can embed images of different formats too:
+
+![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
+
+And you can embed external images too:
+
+![Random](https://thiscatdoesnotexist.com/)
+
+## Comments
+If you'd like to make additional comments that is important for your module entry
