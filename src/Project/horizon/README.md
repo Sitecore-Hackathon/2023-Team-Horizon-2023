@@ -8,10 +8,9 @@ All approved content will then be fed back into Sitecore XM Cloud using the REST
 
 ## How to run this project locally
 
-TODO
+Navigate to the root of the project, then run the npm install command
+
+After all packages have been installed successfull, run the npm start commands below.
 
 ### `npm install and npm start`
 
-Navigate to the root of the project, then run the npm install command
-
-After all packages have been installed successfull, run the npm start command.
