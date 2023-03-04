@@ -5,8 +5,6 @@
 - [Entry form template](ENTRYFORM.md)
   
 ### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
-# Team
-Team Horizon 2023
 
 # Category
 2.	Best Enhancement to XM Cloud
