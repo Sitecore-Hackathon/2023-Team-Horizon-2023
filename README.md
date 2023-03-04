@@ -52,7 +52,7 @@ Team Horizon 2023
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
 
-1. Download and install the [Sitecore package](docs\Team-horizon-2023-package-1.zip) into your Sitecore 10.3 instance. 
+1. Download and install the Sitecore package `./docs/Team-horizon-2023-package-1.zip` into your Sitecore 10.3 instance. 
 We have a sitecore template 'Horizon' with the condition _Content under 'Global' or one of its descendants created using the Template 'Horizon'_. _Configured webhook to trigger whenever the new item added or item saved or item created  new version._
 3. Create a SendGrid Account from Azure Marketplace and create a SendGrid API key with Full access
 4. Create an Azure Function App (Windows, Node Js 18:LTS). Create an HTTP Trigger function `./src/Azure/IngestContent-HTTP Trigger/` Which adds the transcreation order to Cosmos DB & Queue Trigger function `./src/Azure/IngestMail-Queue Trigger/` to send Email notification.
