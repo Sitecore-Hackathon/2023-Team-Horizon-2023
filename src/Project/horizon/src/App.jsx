@@ -8,8 +8,9 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './logowhite.png';
 import Home from './Pages/Home'
+import Work from './Pages/Work';
+import Report from './Pages/Report';
 import Footer from './Composant/Footer/Footer'
-//import i18next from './i18n'
 
 const  App=()=> {
 
@@ -20,16 +21,16 @@ const  App=()=> {
 
       <Navbar bg="" expand="sm">
         <Container>
-          <Navbar.Brand href="#home"> <img src={logo} className=""  alt="logo" />
+          <Navbar.Brand href="/"> <img src={logo} className=""  alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
 
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                {/*<NavDropdown.Item onClick={() => i18next.changeLanguage('en')}>EN</NavDropdown.Item>
-                <NavDropdown.Item onClick={() => i18next.changeLanguage('fr')}>FR</NavDropdown.Item>
-                <NavDropdown.Item onClick={() => i18next.changeLanguage('ar')}>AR</NavDropdown.Item>*/}
+              <NavDropdown title="Menu" id="basic-nav-dropdown">
+                <NavDropdown.Item href='/'>Home</NavDropdown.Item>
+                <NavDropdown.Item href='/work-orders'>Work orders</NavDropdown.Item>
+                <NavDropdown.Item href="/reports">Reports</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -37,6 +38,8 @@ const  App=()=> {
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/work-orders" element={<Work />} />
+        <Route path="/reports" element={<Report />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
