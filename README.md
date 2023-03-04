@@ -34,10 +34,8 @@ No video
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
-
 - Sitecore XM 10.3 with Webhook configuration
-- We are using Azure Function App (Windows, Node Js 18:LTS) as Notification Hub
+- We are using Azure Function App (Windows, Node Js 18:LTS) as our Notification Hub
 - Azure Cosmos DB with No SQL as a repository to track our transcreation work orders
 - JamStack web portal for managing the transcreation orders and workflows
 - OpenAI API integration to translate the content
@@ -55,7 +53,6 @@ We have a sitecore template 'Horizon' with the condition _Content under 'Global'
 6. Create a OpenAI free account and create API Key
 
 ## Usage instructions
-⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
 Once you have done with all the above setup,
 
@@ -72,3 +69,6 @@ Once you have done with all the above setup,
 <img width="944" alt="Email Notification" src="https://user-images.githubusercontent.com/48400867/222921055-97afa92d-d825-4a0e-85ed-574640776e2e.png">
 
 4.We have integrated with OpenAI API which translates the content as per the request
+
+5.Deployed version of our Portal avialable on [Netlify](https://sitecorehorizon2023.netlify.app/)
+
