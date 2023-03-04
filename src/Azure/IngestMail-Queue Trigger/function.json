@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "order",
+      "queueName": "outqueue",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in",
+      "type": "queueTrigger"
+    },
+    {
+      "name": "message",
+      "apiKey": "SendgridAPIkey",
+      "to": "murarishetti.nikhil@accenture.com",
+      "from": "No-reply@azureadmin.com",
+      "subject": "testing",
+      "text": "testing",
+      "direction": "out",
+      "type": "sendGrid"
+    }
+  ]
+}
