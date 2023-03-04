@@ -9,7 +9,7 @@
 Team Horizon 2023
 
 # Category
-1.	Best Enhancement to XM Cloud
+2.	Best Enhancement to XM Cloud
 
 # Our Solution Summary
 
@@ -43,50 +43,39 @@ Team Horizon 2023
 ⟹ Does your module rely on other Sitecore modules or frameworks?
 
 - Sitecore XM 10.3 with Webhook configuration
-- We are using Azure Function App as Notification Hub
-- Azure Cosmos DB as a repository to track our transcreation work orders
+- We are using Azure Function App (Windows, Node Js 18:LTS) as Notification Hub
+- Azure Cosmos DB with No SQL as a repository to track our transcreation work orders
 - JamStack web portal to pick the transcreation orders
-- Open AI integration to translate the content
+- OpenAI API integration to translate the content
 
 
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
 
-1. Download and install the Sitecore package into your Sitecore 10.3 instance
-2. Create a SendGrid Account from Azure Marketplace and create a SendGrid API key with Full access
-3. Create an Azure Function App. Create a HTTP Trigger function and upload the index.js & function.json which is in our Source code
-4. Copy the Azure Function App URL and configure Webhook in your Sitecore/System/Webhooks
-5. Create a Cosmos DB with NO SQL
+1. Download and install the [Sitecore package](docs\Team-horizon-2023-package-1.zip) into your Sitecore 10.3 instance. 
+We have a sitecore template 'Horizon' with the condition _Content under 'Global' or one of its descendants created using the Template 'Horizon'_. _Configured webhook to trigger whenever the new item added or item saved or item created  new version._
+3. Create a SendGrid Account from Azure Marketplace and create a SendGrid API key with Full access
+4. Create an Azure Function App (Windows, Node Js 18:LTS). Create an HTTP Trigger function `./src/Azure/IngestContent-HTTP Trigger/` Which adds the transcreation order to Cosmos DB & Queue Trigger function `./src/Azure/IngestMail-Queue Trigger/` to send Email notification.
+5. Copy the Azure Function App URL and configure Webhook in your `Sitecore/System/Webhooks`
+6. Create a Cosmos DB with NO SQL
 ![CosmosDB](https://user-images.githubusercontent.com/48400867/222911962-512cc446-6ad6-429b-a546-a47743049c6f.jpg)
-6. Create a Open AI free account
-
-Once you have done with all the above setup,
-
-1. Update any content in Sitecore Content Editor
-![2 Sitecore](https://user-images.githubusercontent.com/48400867/222912080-510910d5-f316-43ed-9ded-0b40bac735f5.jpg)
-![3 workorder creation](https://user-images.githubusercontent.com/48400867/222912135-73092e41-941f-4de7-8d85-53995221d7ac.jpg)
-![4 save](https://user-images.githubusercontent.com/48400867/222912236-2a4c8cfc-51dd-4c74-8303-301846592fb5.jpg)
-
-2. Webhooks will get triggered whenever the content updates under the Global Node. It also logs the data in Cosmos DB
-![5 itemadded in cosmos](https://user-images.githubusercontent.com/48400867/222912275-6df6c7e9-c2e3-4159-9463-5747bd7eab79.jpg)
-
-
-3. We have integrated with OpenAI API which translates the content as per the request
+6. Create a OpenAI free account and create API Key
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
-Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+Once you have done with all the above setup,
 
-![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
+1. Add/Update any content in Sitecore Content Editor
+![Item Added](https://user-images.githubusercontent.com/48400867/222923686-ee1b38fb-d02e-4ba6-a515-346da83b9286.jpg)
 
-You can embed images of different formats too:
+2. Webhooks will get triggered whenever the new item added/saved/new version updates under the Global Node. It also logs the data in Cosmos DB
+![Item Queued to Cosmos DB](https://user-images.githubusercontent.com/48400867/222923848-1106a34d-58d1-4279-a1ea-638d91e95d30.jpg)
+![Item Queued to Cosmos DB 2](https://user-images.githubusercontent.com/48400867/222923899-0965f34e-d6fb-49bb-b78d-80cf1c0b1ecc.jpg)
+![Item Queued to Cosmos DB 3](https://user-images.githubusercontent.com/48400867/222924146-0ea3df2a-3399-4af5-8e96-772f88b45c1a.jpg)
+![Item Queued to Cosmos DB 4](https://user-images.githubusercontent.com/48400867/222924175-7e442ce4-b355-4816-8cfa-8b508e3e3fca.jpg)
 
-![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
+3. Email Notification triggered
+<img width="944" alt="Email Notification" src="https://user-images.githubusercontent.com/48400867/222921055-97afa92d-d825-4a0e-85ed-574640776e2e.png">
 
-And you can embed external images too:
-
-![Random](https://thiscatdoesnotexist.com/)
-
-## Comments
-If you'd like to make additional comments that is important for your module entry
+4.We have integrated with OpenAI API which translates the content as per the request
