@@ -4,8 +4,6 @@
 - MUST READ: **[Submission requirements](SUBMISSION_REQUIREMENTS.md)**
 - [Entry form template](ENTRYFORM.md)
   
-### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
-
 # Category
 2.	Best Enhancement to XM Cloud
 
@@ -30,9 +28,7 @@
 
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
-
-⟹ [Replace this Video link](#video-link)
+No video
 
 
 
@@ -43,12 +39,11 @@
 - Sitecore XM 10.3 with Webhook configuration
 - We are using Azure Function App (Windows, Node Js 18:LTS) as Notification Hub
 - Azure Cosmos DB with No SQL as a repository to track our transcreation work orders
-- JamStack web portal to pick the transcreation orders
+- JamStack web portal for managing the transcreation orders and workflows
 - OpenAI API integration to translate the content
 
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
 
 1. Download and install the Sitecore package `./docs/Team-horizon-2023-package-1.zip` into your Sitecore 10.3 instance. 
 We have a sitecore template 'Horizon' with the condition _Content under 'Global' or one of its descendants created using the Template 'Horizon'_. _Configured webhook to trigger whenever the new item added or item saved or item created  new version._

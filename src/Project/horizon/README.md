@@ -8,9 +8,15 @@ All approved content will then be fed back into Sitecore XM Cloud using the REST
 
 ## How to run this project locally
 
-Navigate to the root of the project, then run the npm install command
+- Navigate to the root of the project.
+- Create a `.env` file based on the existing `tempate.env.rename`. Populate it with relevant values
+- Then run the npm install command
 
 After all packages have been installed successfull, run the npm start commands below.
 
 ### `npm install and npm start`
 
+
+## TODO
+
+Functionality not complete due to unavailability of our Fron-End team member due to unforseen circumstances

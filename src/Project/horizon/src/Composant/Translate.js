@@ -61,7 +61,7 @@ const Translate = () =>  {
     return (
         <div>
             <div className="app-header">
-                <h4 className="header">Translate</h4>
+                <h4 className="header">Translate from</h4>
             </div>
 
             <div className='app-body'>
