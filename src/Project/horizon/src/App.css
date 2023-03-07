@@ -56,7 +56,26 @@
 .App-link {
   color: #61dafb;
 }
-
+textarea{
+  font-size: 1rem !important;
+  background: rgba(255, 255, 255, .6);
+  border-radius: 3px !important;
+}
+::placeholder  {
+  font-size: 1rem;
+}
+.defaultField{
+  padding-top: 3.4rem;
+}
+.ui.form{
+  flex-wrap: wrap;
+}
+.language-select{
+  background: none;
+  border: 0;
+  color: #000;
+  font-size: 1rem;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
